@@ -416,6 +416,7 @@
                 <form class="row g-3 p-4" netlify name="contactForm" data-netlify-recaptcha="true">
                     <div class="col-12">
                         <div class="row">
+                            <!-- Floating Inputs -->
                             <div class="col-12 col-md-6 form-group">
                                 <label for="inputFirstName" class="form-label">First Name</label>
                                 <input type="text" class="form-control" name="firstName" id="inputFirstName"
@@ -426,15 +427,20 @@
                                 <input type="text" class="form-control" name="lastName" id="inputLastName"
                                     placeholder="Last name" required>
                             </div>
-                            <div class="col-12 col-md-6 form-group">
-                                <label for="inputEmail" class="form-label">Email</label>
-                                <input type="email" class="form-control" name="email" id="inputEmail"
-                                    placeholder="name@company.com" required>
+                            <div class="col-12 col-md-6 form-group gy-3">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="floatingInputGrid"
+                                        placeholder="name@example.com" value="mdo@example.com">
+                                    <label for="floatingInputGrid">Email address</label>
+                                </div>
                             </div>
-                            <div class="col-12 col-md-6 form-group">
-                                <label for="inputPhone" class="form-label">Phone (optional)</label>
-                                <input type="tel" class="form-control" name="phone" id="inputPhone" placeholder="555-555-5555">
-                            </div>
+                            <div class="col-12 col-md-6 form-group gy-3">
+                                <div class="form-floating">
+                                    <input type="phone" class="form-control" id="floatingInputGrid"
+                                        placeholder="phone" value="mdo@example.com">
+                                    <label for="floatingInputGrid">Phone (optional)</label>
+                                </div>
+                            </div>                          
                             <div class="col-12 form-group">
                                 <label for="inputSubject" class="form-label">Subject</label>
                                 <input type="text" class="form-control" name="subject" id="inputSubject"
@@ -442,8 +448,13 @@
                             </div>
                             <div class="col-12 form-group">
                                 <label for="message" class="form-label">Message</label>
-                                <textarea type="text" class="form-control" name="message" id="message" placeholder="research - change or delete"
+                                <textarea type="text" class="form-control" name="message" id="message"
                                     rows="4"></textarea>
+                            </div>
+                            <div class="col-12 form-floating">
+                                <label for="floatingTextarea2">Message</label>
+                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                                    style="height: 100px"></textarea>
                             </div>
                             <div data-netlify-recaptcha="true"></div>
                             <div class="col-12 d-flex justify-content pt-2">
